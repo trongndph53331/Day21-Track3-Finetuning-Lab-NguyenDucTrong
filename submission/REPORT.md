@@ -1,6 +1,6 @@
 # Lab 21 — Evaluation Report
 
-**Họ tên**: Nguyễn Đức Trọng · **MSSV**: PH53331 · **Ngày**: 21/08/2026
+**Họ tên**: Nguyễn Đức Trọng · **MSSV**: 2A202601291 · **Ngày**: 21/08/2026
 **Tier**: `T4`  **Base model**: `unsloth/Qwen3.5-4B`  **GPU thực tế**: `Tesla T4, 14.6 GB`
 
 > Số liệu lấy trực tiếp từ `results/`; đánh giá dùng đủ 50 mẫu target và 15 mẫu regression, không đặt `EVAL_LIMIT`.
