@@ -32,7 +32,11 @@ def check(name: str, status: str, detail: str = "") -> None:
 
 
 def _sha(path: pathlib.Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()[:16]
+    # Git may check text files out with CRLF on Windows.  The reference hashes
+    # were produced from LF files, so normalize line endings before comparing;
+    # otherwise an untouched eval set is incorrectly reported as modified.
+    data = path.read_bytes().replace(b"\r\n", b"\n")
+    return hashlib.sha256(data).hexdigest()[:16]
 
 
 def _load_json(path: pathlib.Path):
